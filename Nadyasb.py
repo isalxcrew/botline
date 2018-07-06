@@ -11,10 +11,10 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 
-nadya = LINE()
+nadya = LINE("KsqXmgvOKsiLkZKOnizE7GrKEKnVs3WUX1pl20M0ZuDGA/GYF37O1nlXJlsaCiV/zhL5XPOZfayo+6SMKLeEj7vktFYVS52EFJj0CZLLu9T9rhK5Cr7lSWGHfOEE/4YBxAqdg0i1Sk/A6lQt5uDW8AdB04t89/1O/w1cDnyilFU=")
 #nadya = LINE("TOKEN KAMU")
 #nadya = LINE("Email","Password")
-nadya.log("Auth Token : " + str(nadya.authToken))
+nadya.log("KsqXmgvOKsiLkZKOnizE7GrKEKnVs3WUX1pl20M0ZuDGA/GYF37O1nlXJlsaCiV/zhL5XPOZfayo+6SMKLeEj7vktFYVS52EFJj0CZLLu9T9rhK5Cr7lSWGHfOEE/4YBxAqdg0i1Sk/A6lQt5uDW8AdB04t89/1O/w1cDnyilFU=" + str(nadya.authToken))
 channelToken = nadya.getChannelResult()
 nadya.log("Channel Token : " + str(channelToken))
 
@@ -76,7 +76,7 @@ def sendMessageWithMention(to, mid):
         
 def helpmessage():
     helpMessage = "╔═══════════════" + "\n" + \
-                  "╠♥ ✿✿✿ NADYA_TJ ✿✿✿ ♥" + "\n" + \
+                  "╠♥ ✿✿✿ ADMIN ✿✿✿ ♥" + "\n" + \
                   "║" + "\n" + \
                   "╠══✪〘 Help Message 〙✪══" + "\n" + \
                   "║" + "\n" + \
@@ -151,7 +151,7 @@ def helpmessage():
                   "╠➥ SearchImage「Search」" + "\n" + \
                   "╠➥ ScreenshootWebsite「LinkUrl」" + "\n" + \
                   "║" + "\n" + \
-                  "╚═〘 Credits By: ©Nadya_TJ™  〙"
+                  "╚═〘 Credits By: @ICAL™  〙"
     return helpMessage
     
 def helptexttospeech():
@@ -210,7 +210,7 @@ def helptexttospeech():
                          "╠ vi : Vietnamese" + "\n" + \
                          "╠ cy : Welsh" + "\n" + \
                          "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
-                          "Contoh : say-id Nadya Cantik"
+                          "Contoh : say-id ADMIN"
     return helpTextToSpeech
     
 def helptranslate():
@@ -322,7 +322,7 @@ def helptranslate():
                        "╠ fil : Filipino" + "\n" + \
                        "╠ he : Hebrew" + "\n" + \
                        "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
-                         "Contoh : tr-id Nadya Cantik"
+                         "Contoh : tr-id ADMIN"
     return helpTranslate
 #==============================================================================#
 def lineBot(op):
@@ -343,8 +343,8 @@ def lineBot(op):
             print ("[ 24 ] NOTIFIED LEAVE ROOM")
             if settings["autoLeave"] == True:
                 nadya.leaveRoom(op.param1)
-        if op.type == 25:
-            print ("[ 25 ] SEND MESSAGE")
+        if op.type == 26:
+            print ("[ 26 ] SEND MESSAGE")
             msg = op.message
             text = msg.text
             msg_id = msg.id
